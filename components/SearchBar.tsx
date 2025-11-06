@@ -44,10 +44,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm,
     const dataArray = new Uint8Array(bufferLength);
     analyser.getByteTimeDomainData(dataArray);
 
-    canvasCtx.fillStyle = '#00A8A8';
+    canvasCtx.fillStyle = '#FFB6C1';
     canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
     canvasCtx.lineWidth = 2;
-    canvasCtx.strokeStyle = '#FFFFFF';
+    canvasCtx.strokeStyle = '#000000';
     canvasCtx.beginPath();
 
     const sliceWidth = canvas.width * 1.0 / bufferLength;
@@ -197,7 +197,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm,
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="e.g. 'compiler' or 'divine...' "
-            className="flex-grow p-1 bg-holy-black border-2 border-holy-dark-blue shadow-holy-inset focus:outline-none placeholder-holy-gray"
+            className="flex-grow p-1 bg-holy-white text-holy-black border-2 border-holy-dark-blue shadow-holy-inset focus:outline-none placeholder-holy-gray"
           />
           <button
             type="submit"
@@ -208,7 +208,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm,
         </form>
       </div>
       <div className="mt-auto pt-2">
-        <canvas ref={canvasRef} className="w-full h-16 border border-holy-dark-blue bg-holy-blue shadow-holy-inset" width="500" height="100"></canvas>
+        <canvas ref={canvasRef} className="w-full h-16 border border-holy-dark-blue bg-holy-pink shadow-holy-inset" width="500" height="100"></canvas>
         <StaticSlider label="White Static" type="white" />
         <StaticSlider label="Pink Static" type="pink" />
         <div className="mt-2">

@@ -126,7 +126,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container mx-auto p-4 max-w-4xl">
-      <div className="bg-holy-black p-2 shadow-holy-outset border-2 border-holy-dark-blue">
+      <div className="bg-holy-pink p-2 shadow-holy-outset border-2 border-holy-dark-blue">
         <Header />
 
         <main className="mt-4 p-2 border-2 border-holy-dark-blue shadow-holy-inset min-h-[60vh]">

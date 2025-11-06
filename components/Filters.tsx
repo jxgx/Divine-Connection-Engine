@@ -16,7 +16,7 @@ const standardCategories: JobCategory[] = ['AI', 'IT', 'Marketing', 'Web3', 'SEO
 export const Filters: React.FC<FiltersProps> = ({ category, setCategory, isRussian, setIsRussian, onFetchBibleVerse, bibleVerse, isVerseLoading }) => {
   return (
     <fieldset className="border-2 border-holy-dark-blue p-2 w-full md:w-1/3 shadow-holy-inset mb-4 md:mb-0">
-      <legend className="px-1 font-bold">Filters</legend>
+      <legend className="px-1 font-bold"></legend>
       <div className="space-y-3">
         <div>
           <label className="block mb-1">Category:</label>
@@ -48,7 +48,7 @@ export const Filters: React.FC<FiltersProps> = ({ category, setCategory, isRussi
               type="checkbox"
               checked={isRussian}
               onChange={() => setIsRussian(!isRussian)}
-              className="appearance-none w-4 h-4 bg-holy-black border-2 border-holy-dark-blue shadow-holy-inset checked:bg-holy-yellow"
+              className="appearance-none w-4 h-4 bg-holy-white border-2 border-holy-dark-blue shadow-holy-inset checked:bg-holy-yellow"
             />
             <span>Russian Language Roles</span>
           </label>

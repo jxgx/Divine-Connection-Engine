@@ -15,8 +15,8 @@ const JobCard: React.FC<JobCardProps> = ({ job, isSaved, onSave, onRemove, onTog
     <div className={`p-2 border-b-2 border-dashed border-holy-dark-blue ${job.applied ? 'opacity-60' : ''}`}>
       <div className="flex justify-between items-start">
         <div className="flex-grow">
-          <h3 className={`text-lg font-bold text-holy-white ${job.applied ? 'line-through' : ''}`}>{job.title}</h3>
-          <p className="text-md font-bold text-holy-yellow">{job.company}</p>
+          <h3 className={`text-lg font-bold text-holy-black ${job.applied ? 'line-through' : ''}`}>{job.title}</h3>
+          <p className="text-md font-bold text-holy-dark-blue">{job.company}</p>
         </div>
         <div className="flex items-center space-x-2 ml-2">
             {view === 'saved' && (
@@ -36,16 +36,16 @@ const JobCard: React.FC<JobCardProps> = ({ job, isSaved, onSave, onRemove, onTog
             </button>
         </div>
       </div>
-      <div className="text-sm text-holy-gray-light flex space-x-4 my-1">
+      <div className="text-sm text-holy-black opacity-75 flex space-x-4 my-1">
         <span><span className="font-bold">Date:</span> {job.datePosted}</span>
         <span><span className="font-bold">Location:</span> {job.location}</span>
       </div>
-      <p className="my-2 text-sm text-holy-white">{job.description}</p>
+      <p className="my-2 text-sm text-holy-black">{job.description}</p>
       <a
         href={job.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-holy-yellow underline hover:text-holy-white"
+        className="text-holy-dark-blue font-bold underline hover:text-holy-black"
       >
         &gt;&gt; Go To Posting
       </a>
@@ -68,7 +68,7 @@ export const JobList: React.FC<JobListProps> = ({ jobs, onSaveJob, onRemoveJob, 
   }
 
   return (
-    <div className="space-y-2 bg-holy-black p-1 border-2 border-holy-dark-blue shadow-holy-inset">
+    <div className="space-y-2 bg-holy-pink p-1 border-2 border-holy-dark-blue shadow-holy-inset">
       {jobs.map(job => (
         <JobCard 
             key={job.id} 
