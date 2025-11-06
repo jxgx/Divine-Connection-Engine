@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divine Connection Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        cursor: default;
+      }
+      /* For Webkit browsers */
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        background: #FFFF00;
+        border: 2px solid #0000A8;
+        cursor: pointer;
+        box-shadow: inset -1px -1px 0px #000054, inset 1px 1px 0px #00FFFF;
+      }
+      input[type='range']::-webkit-slider-runnable-track {
+        background: #A8A8A8;
+        border: 1px solid #0000A8;
+        height: 4px;
+      }
+      /* For Firefox */
+      input[type='range']::-moz-range-thumb {
+        width: 12px;
+        height: 12px;
+        background: #FFFF00;
+        border: 2px solid #0000A8;
+        cursor: pointer;
+        border-radius: 0;
+      }
+      input[type='range']::-moz-range-track {
+        background: #A8A8A8;
+        border: 1px solid #0000A8;
+        height: 4px;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"Space Mono"', 'monospace'],
+            },
+            colors: {
+              'holy-blue': '#00A8A8',
+              'holy-dark-blue': '#0000A8',
+              'holy-white': '#FFFFFF',
+              'holy-yellow': '#FFFF00',
+              'holy-gray': '#A8A8A8',
+              'holy-black': '#000000',
+              'holy-dark-blue-shadow': '#000054',
+              'holy-cyan-highlight': '#00FFFF',
+            },
+            boxShadow: {
+              'holy-outset': 'inset -2px -2px 0px #000054, inset 2px 2px 0px #00FFFF',
+              'holy-inset': 'inset 2px 2px 0px #000054, inset -2px -2px 0px #00FFFF',
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-holy-blue font-mono text-holy-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
